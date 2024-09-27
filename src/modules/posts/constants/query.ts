@@ -1,0 +1,1 @@
+export const POST_LIST_KEY = 'POST_LIST_KEY'

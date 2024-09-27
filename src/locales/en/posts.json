@@ -1,0 +1,8 @@
+{
+  "title": "Listado de posts",
+  "fields": {
+    "title": "Título",
+    "body": "Resumen",
+    "actions": "Acciones"
+  }
+}
