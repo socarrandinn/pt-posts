@@ -1,10 +1,10 @@
 import { memo } from 'react';
 import { es, enUS } from 'date-fns/locale';
-import { ChildrenProps } from '../common/types/common';
 import { useTranslation } from 'react-i18next';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { DateSettingsProvider } from './DateSettingsContext';
+import { ChildrenProps } from '../types';
 
 type DateProviderProps = ChildrenProps;
 

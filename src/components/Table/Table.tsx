@@ -13,6 +13,7 @@ import { CardFormPaperProps } from '../PaperSection/CardForm';
 import { TableResultProps } from '../../types';
 import { useTablePagination } from './hooks';
 import { HeadCell } from './interfaces/table';
+import SpaceRow from './Rows/SpaceRow';
 
 export type EnhancedTableProps = TableResultProps & {
   data: any[];
@@ -102,6 +103,7 @@ const Table = ({
                 const id = row._id || row.id;
                 return (
                   <Fragment key={id}>
+                    {!hideRowSpace && <SpaceRow rowCount={columns.length} />}
                     <TableRow
                       className='row'
                       tabIndex={-1}

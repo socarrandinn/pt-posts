@@ -1,3 +1,4 @@
+import { LongText } from "../../../components/LongText";
 import { HeadCell } from "../../../components/Table/interfaces/table";
 import PostActions from "../components/PostActions/PostActions";
 import { IPost } from "../interfaces/post.interface";
@@ -9,6 +10,7 @@ export const titleColumn: HeadCell<IPost> = {
 export const bodyColumn: HeadCell<IPost> = {
   field: 'body',
   headerName: 'posts:fields.body',
+  renderCell: (body: string) => <LongText text={body} lineClamp={2} />
 };
 
 export const actionsColumn: HeadCell<IPost> = {

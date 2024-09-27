@@ -21,7 +21,7 @@ const Navbar = () => {
             <Home />
           </IconButton>
         </Box>
-        <ThemeButton toggle={toggleTheme} current={settings.theme} />
+        <ThemeButton toggle={toggleTheme} current={settings.theme}  />
       </Toolbar>
     </AppBar>
   );

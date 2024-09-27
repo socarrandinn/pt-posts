@@ -70,7 +70,7 @@ export const common = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Poppins',
+    fontFamily: 'Roboto',
     h1: {
       fontSize: 18,
       fontWeight: 600,

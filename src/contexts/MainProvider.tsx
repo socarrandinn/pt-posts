@@ -1,15 +1,16 @@
-import { ChildrenProps } from '../common/types/common';
+import { ChildrenProps } from '../types';
 import { AppProvider } from './AppProvider';
 import { I18Provider } from './I18Context';
+import SettingsProvider from './SettingsProvider';
 
 
 const MainProvider = ({ children }: ChildrenProps) => {
   return (
-    <I18Provider>
-      {/* <DateProvider> */}
-      <AppProvider>{children}</AppProvider>
-      {/*  </DateProvider> */}
-    </I18Provider>
+    <SettingsProvider>
+      <I18Provider>
+        <AppProvider>{children}</AppProvider>
+      </I18Provider>
+    </SettingsProvider>
 
   );
 };
