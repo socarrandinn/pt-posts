@@ -32,6 +32,7 @@ const PostSearchInput = () => {
         fullWidth
         name='search'
         inputMode='search'
+        size='small'
         slotProps={{
           input: {
             startAdornment: (
@@ -43,7 +44,7 @@ const PostSearchInput = () => {
               <InputAdornment position='start'>
                 {!!searchTerm && (
                   <SmallIconButton onClick={handleClear}>
-                    <CloseIcon />
+                    <CloseIcon sx={{ mr: 1 }}  />
                   </SmallIconButton>
                 )}
               </InputAdornment>

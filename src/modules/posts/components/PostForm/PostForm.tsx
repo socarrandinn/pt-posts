@@ -20,7 +20,7 @@ const PostForm = ({ control, isLoading, onSubmit }: PostFormProps) => {
   return (
     <Box sx={{ mt: 2 }}>
       <Form onSubmit={onSubmit} control={control} isLoading={isLoading} id={'post-form'} noValidate>
-        <Grid2 container spacing={{ xs: 1, md: 2 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+        <Grid2 container spacing={{ xs: 2, md:3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           <Grid2 size={12}>
             <FormTextField
               autoFocus

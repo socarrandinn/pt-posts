@@ -5,7 +5,8 @@ export const MuiDialog = {
         position: 'relative',
         borderRadius: '10px',
         boxShadow: 0,
-        padding: '24px 16px 16px 16px',
+        padding: '20px 12px 12px 12px',
+
       },
       '& .MuiBackdrop-root': {
         backdropFilter: 'blur(10px)',
@@ -14,10 +15,20 @@ export const MuiDialog = {
     }),
   },
 };
+
 export const MuiDialogTitle = {
   styleOverrides: {
     root: () => ({
       padding: '16px 24px',
+      fontWeight: 700
+    }),
+  },
+};
+
+export const MuiDialogContent = {
+  styleOverrides: {
+    root: () => ({
+      padding: '8px 16px',
       fontWeight: 700
     }),
   },

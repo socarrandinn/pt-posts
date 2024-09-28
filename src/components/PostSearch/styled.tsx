@@ -36,7 +36,7 @@ export const SearchInput = styled(TextField)(({ theme }) => ({
     marginRight: 0,
   },
   '.MuiButton-root': {
-    padding: '7px 16px',
+    padding: '5px 10px',
   },
 }));
 
@@ -53,8 +53,8 @@ export const SearchContainer = styled('div')(({ theme }) => ({
 }));
 
 export const SmallIconButton = styled(IconButton)(() => ({
-  width: 20,
-  height: 20,
+  width: 16,
+  height: 16,
   fontWeight: 'bold',
   marginRight: 8,
   svg: {
@@ -64,7 +64,7 @@ export const SmallIconButton = styled(IconButton)(() => ({
 }));
 
 export const SearchButton = styled(Button)(() => ({
-  minHeight: 35,
+  minHeight: 40,
   borderTopLeftRadius: 0,
   borderBottomLeftRadius: 0,
   minWidth: 50,

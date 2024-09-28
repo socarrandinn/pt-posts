@@ -11,7 +11,7 @@ const CreatePostAction = () => {
   const { isOpen, onOpen, onClose } = useToggle(false)
   return (
     <>
-      <Button onClick={onOpen} fullWidth sx={{ maxWidth: 250 }} variant='contained' startIcon={<AddOutlined />}>
+      <Button onClick={onOpen} fullWidth sx={{ maxWidth: { xs: '100%', md: 200 } }} variant='contained' startIcon={<AddOutlined />}>
         {t('create')}
       </Button>
       <PostCreateModal open={isOpen} onClose={onClose} />

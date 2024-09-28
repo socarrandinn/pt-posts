@@ -48,16 +48,6 @@ export const common = createTheme({
         }),
       },
     },
-    MuiTabs: {
-      styleOverrides: {
-        flexContainer: {
-          '.MuiButtonBase-root': {
-            minWidth: 20,
-            textTransform: 'none',
-          },
-        },
-      },
-    },
   },
   typography: {
     fontFamily: 'Roboto',

@@ -15,7 +15,7 @@ const PostContainer = () => {
 
   return (
     <TableHeaderLayout title={t('list')}>
-      <Stack gap={2} justifyContent={'space-between'} flexDirection={{ xs: 'column', md: 'row' }}>
+      <Stack gap={{ xs: 1, md: 2 }} justifyContent={'space-between'} flexDirection={{ xs: 'column', md: 'row' }}>
         <PostSearchInput />
         <CreatePostAction />
       </Stack>

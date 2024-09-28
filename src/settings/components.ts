@@ -1,4 +1,4 @@
-import { MuiDialog, MuiDialogTitle } from './theme-components/dialog';
+import { MuiDialog, MuiDialogTitle, MuiDialogContent } from './theme-components/dialog';
 import { MuiAvatar } from './theme-components/avatar';
 import { MuiPaper } from './theme-components/paper';
 import { MuiIconButton } from './theme-components/iconButton';
@@ -11,6 +11,7 @@ export const components: any = {
   MuiAvatar,
   MuiDialog,
   MuiDialogTitle,
+  MuiDialogContent,
   MuiIconButton,
   MuiPaper,
   MuiChip,

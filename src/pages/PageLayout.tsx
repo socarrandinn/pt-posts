@@ -5,7 +5,7 @@ import { ChildrenProps } from '../types';
 const Container = styled(Box)(({ theme }) => ({
   padding: '24px 16px',
   [theme.breakpoints.down('sm')]: {
-    padding: 8
+    padding: 0
   }
 }))
 
