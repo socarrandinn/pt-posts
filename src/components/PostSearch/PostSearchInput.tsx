@@ -44,7 +44,7 @@ const PostSearchInput = () => {
               <InputAdornment position='start'>
                 {!!searchTerm && (
                   <SmallIconButton onClick={handleClear}>
-                    <CloseIcon sx={{ mr: 1 }}  />
+                    <CloseIcon />
                   </SmallIconButton>
                 )}
               </InputAdornment>

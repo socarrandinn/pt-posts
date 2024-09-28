@@ -53,10 +53,10 @@ export const SearchContainer = styled('div')(({ theme }) => ({
 }));
 
 export const SmallIconButton = styled(IconButton)(() => ({
-  width: 16,
-  height: 16,
+  width: 20,
+  height: 20,
   fontWeight: 'bold',
-  marginRight: 8,
+  marginRight: 12,
   svg: {
     with: 15,
     height: 15,
