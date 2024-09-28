@@ -31,8 +31,7 @@ const PostForm = ({ control, isLoading, onSubmit }: PostFormProps) => {
             />
           </Grid2>
           <Grid2 size={12}>
-            <FormTextField
-              autoFocus
+            <FormTextField              
               required
               multiline
               rows={4}
@@ -44,7 +43,6 @@ const PostForm = ({ control, isLoading, onSubmit }: PostFormProps) => {
           <Grid2 size={12}>
             <SelectUsers name='userId' label={t('fields.userId')} placeholder={t('helperText.userId')} />
           </Grid2>
-
         </Grid2>
       </Form>
     </Box>
