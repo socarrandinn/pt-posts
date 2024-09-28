@@ -1,5 +1,10 @@
 {
-
   "save": "Guardar",
-  "cancel":"Cancelar"
+  "cancel": "Cancelar",
+  "delete": "Eliminar",
+  "edit":"Editar",
+  "deleteConfirmation": {
+    "title": "Confirmar eliminación",
+    "confirmation": "¿Está seguro de que desea eliminar este registro?"
+  }
 }

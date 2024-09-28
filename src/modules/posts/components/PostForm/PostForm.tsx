@@ -27,7 +27,7 @@ const PostForm = ({ control, isLoading, onSubmit }: PostFormProps) => {
               required
               name='title'
               label={t('fields.title')}
-              helperText={t('helperText.title')}
+              placeholder={t('helperText.title')}
             />
           </Grid2>
           <Grid2 size={12}>
@@ -38,11 +38,11 @@ const PostForm = ({ control, isLoading, onSubmit }: PostFormProps) => {
               rows={4}
               name='body'
               label={t('fields.body')}
-              helperText={t('helperText.body')}
+              placeholder={t('helperText.body')}
             />
           </Grid2>
           <Grid2 size={12}>
-            <SelectUsers name='userId' label={t('fields.userId')} />
+            <SelectUsers name='userId' label={t('fields.userId')} placeholder={t('helperText.userId')} />
           </Grid2>
 
         </Grid2>

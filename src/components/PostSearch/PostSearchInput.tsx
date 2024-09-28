@@ -6,8 +6,6 @@ import { SearchContainer, SearchInput, SmallIconButton } from './styled';
 import { useTranslation } from 'react-i18next';
 import { usePostContext } from '../../modules/posts/contexts/PostContext';
 
-
-
 const PostSearchInput = () => {
   const { t } = useTranslation('posts');
   const { onFilter } = usePostContext()
@@ -27,28 +25,30 @@ const PostSearchInput = () => {
   return (
     <SearchContainer>
       <SearchInput
-        onChange={handleSearch}       
+        onChange={handleSearch}
         value={searchTerm}
         id={'search-posts'}
         placeholder={t('search')}
         fullWidth
         name='search'
         inputMode='search'
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position='start'>
-              <SearchIcon sx={{ ml: 2 }} />
-            </InputAdornment>
-          ),
-          endAdornment: (
-            <InputAdornment position='start'>
-              {!!searchTerm && (
-                <SmallIconButton onClick={handleClear}>
-                  <CloseIcon />
-                </SmallIconButton>
-              )}
-            </InputAdornment>
-          ),
+        slotProps={{
+          input: {
+            startAdornment: (
+              <InputAdornment position='start'>
+                <SearchIcon sx={{ ml: 2 }} />
+              </InputAdornment>
+            ),
+            endAdornment: (
+              <InputAdornment position='start'>
+                {!!searchTerm && (
+                  <SmallIconButton onClick={handleClear}>
+                    <CloseIcon />
+                  </SmallIconButton>
+                )}
+              </InputAdornment>
+            ),
+          }
         }}
         variant='outlined'
       />

@@ -10,7 +10,7 @@ type TableHeaderLayoutProps = ChildrenProps & {
 const TableHeaderLayout = ({ children, title }: TableHeaderLayoutProps) => {
 
   return (
-    <Stack gap={{ xs: 1, md: 2 }} >
+    <Stack gap={{ xs: 1, md: 2 }} mt={3} >
       <Typography variant="h2" sx={{ fontWeight: 600 }}>{title}</Typography>
       {children}
     </Stack>

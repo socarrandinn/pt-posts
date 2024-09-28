@@ -50,6 +50,9 @@ const usePostCreateForm = (onClose: () => void, defaultValues: IPost = initValue
       onClose?.();
       resetForm();
     },
+    onError: () => {
+      toast.error(t('errors:generalErrorMessage'));
+    }
   },
   );
 

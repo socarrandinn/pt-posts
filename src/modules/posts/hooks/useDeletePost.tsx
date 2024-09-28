@@ -15,6 +15,9 @@ export const useDeletePost = (id: number, onClose: () => void) => {
       onClose?.();
       queryClient.invalidateQueries({ queryKey: [POST_LIST_KEY, id] });
     },
+    onError: () => {
+      toast.error(t('errors:generalErrorMessage'));
+    }
   },
   );
 };

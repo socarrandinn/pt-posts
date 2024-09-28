@@ -1,6 +1,15 @@
 {
-  "required":"Este campo es requerido",
-  "positive":"Este campo debe ser positivo",
-  "min-4": "Este campo debe tener al menos 4 caracteres",
-  "max-255":"Este campo debe tener como máximo 255 caracteres"
+  "required": "This field is required",
+  "positive": "This field must be positive",
+  "min-4": "This field must have at least 4 characters",
+  "max-50": "This field must have at most 50 characters",
+  "max-255": "This field must have at most 255 characters",
+  "invalidValue": "Please enter a valid value",
+
+  "errors": {
+    "notFound": "Not found",
+    "notFoundDescription": "This may happen if the URL is incorrect or the item has been deleted.",
+    "generalErrorMessage": "We were unable to complete this action",
+    "loadValue": "Could not load the value"
+  }
 }

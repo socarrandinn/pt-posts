@@ -42,6 +42,7 @@ export const SearchInput = styled(TextField)(({ theme }) => ({
 
 export const SearchContainer = styled('div')(({ theme }) => ({
   position: 'relative',
+  flexGrow: 1,
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',

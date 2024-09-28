@@ -2,5 +2,14 @@
   "required":"Este campo es requerido",
   "positive":"Este campo debe ser positivo",
   "min-4": "Este campo debe tener al menos 4 caracteres",
-  "max-255":"Este campo debe tener como máximo 255 caracteres"
+  "max-50":"Este campo debe tener como máximo 50 caracteres",
+  "max-255":"Este campo debe tener como máximo 255 caracteres",
+  "invalidValue": "Por favor, introduzca un valor válido",
+
+  "errors": {
+    "notFound": "No encontrado",
+    "notFoundDescription": "Puede suceder si tiene la URL incorrecta o si el elemento ha sido eliminado.",
+    "generalErrorMessage": "No hemos podido realizar esta acción",
+    "loadValue": "No fue posible cargar el valor"
+  }
 }

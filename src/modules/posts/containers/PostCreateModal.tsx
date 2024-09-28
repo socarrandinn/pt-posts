@@ -40,7 +40,7 @@ const PostCreateModal = ({
       aria-labelledby={'post-creation-title'}
     >
       <DialogContent>
-      
+
         {!dataError && (
           <ConditionContainer active={!loadingInitData} alternative={<PostFormSkeleton />}>
             <PostForm
@@ -53,7 +53,7 @@ const PostCreateModal = ({
         )}
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose}>{t('common:cancel')}</Button>
+        <Button sx={{ mr: 1 }} onClick={handleClose}>{t('common:cancel')}</Button>
         <LoadingButton
           variant='contained'
           type={'submit'}

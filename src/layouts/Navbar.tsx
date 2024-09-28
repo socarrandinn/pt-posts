@@ -3,13 +3,14 @@ import { memo } from 'react'
 import { Home } from '@mui/icons-material'
 import ThemeButton from '../components/ThemeButton';
 import { useSettings } from '../contexts/SettingsProvider';
+import LanguageButton from '../components/LenguageSelector/LanguageButton';
 
 const Navbar = () => {
   const { toggleTheme, settings } = useSettings();
   return (
     <AppBar position="static"
       sx={{
-        maxWidth: 400,
+        maxWidth: 500,
         width: '100%',
         marginX: 'auto',
         borderRadius: 20,
@@ -21,7 +22,8 @@ const Navbar = () => {
             <Home />
           </IconButton>
         </Box>
-        <ThemeButton toggle={toggleTheme} current={settings.theme}  />
+        <LanguageButton />
+        <ThemeButton toggle={toggleTheme} current={settings.theme} />
       </Toolbar>
     </AppBar>
   );

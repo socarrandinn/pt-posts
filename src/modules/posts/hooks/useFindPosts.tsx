@@ -9,8 +9,7 @@ export const useFindPosts = () => {
 
   const { data, isLoading, error } = useQuery({
     queryKey: [POST_LIST_KEY],
-    queryFn: fetch,
-
+    queryFn: fetch
   },);
 
   return { data, isLoading, error };

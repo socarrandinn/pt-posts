@@ -1,19 +1,22 @@
 {
-  "title": "Listado de posts",
-  "create":"Crear post",
-  "edit":"Editar post",
-
-  "successUpdate":"Post actualizado satisfactoriamente",
-  "successCreated":"Post creado satisfactoriamente",
-  "successDeleted":"Post eliminado satisfactoriamente",
-  
+  "list": "Listado de publicaciones",
+  "create": "Crear publicación",
+  "edit": "Editar publicación",
+  "successUpdate": "Publicación actualizada satisfactoriamente",
+  "successCreated": "Publicación creada satisfactoriamente",
+  "successDeleted": "Publicación eliminada satisfactoriamente",
   "fields": {
     "title": "Título",
     "body": "Resumen",
+    "userId": "Seleccione el usuario",
     "actions": "Acciones"
   },
-  "helperText":{
-    "title": "Inserta el título",
-    "body": "Inserta el resumen"
+  "column": {
+    "user": "Usuario"
+  },
+  "helperText": {
+    "title": "Introduce el título",
+    "body": "Introduce el resumen",
+    "userId": "Seleccione el usuario"
   }
 }

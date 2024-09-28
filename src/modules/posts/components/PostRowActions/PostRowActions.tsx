@@ -4,29 +4,32 @@ import { useTranslation } from 'react-i18next';
 import { RowActions } from '../../../../components/RowAction';
 import { Edit } from '@mui/icons-material';
 import { useParamsLink } from '../../../../components/Table/hooks/useParamsLink';
+import DeleteAction from '../../../../components/DeleteAction/DeleteAction';
+import useToggle from '../../../../hooks/useToggle';
+import { useDeletePost } from '../../hooks/useDeletePost';
 
 type UserStatusProps = {
   rowId: number;
 };
 
 const PostRowActions = ({ rowId }: UserStatusProps) => {
-  const { t } = useTranslation('post');
-  // const { isOpen, onClose, onOpen } = useToggle();
+  const { t } = useTranslation('common');
+  const { isOpen, onClose, onOpen } = useToggle();
   const handleEdit = useParamsLink({ edit: rowId });
-  // const { mutate, isPending, error } = useDeletePost(rowId, onClose);
+  const { mutate, isPending, error } = useDeletePost(rowId, onClose);
   return (
     <>
       <Stack direction='row' spacing={1} alignItems={'centre'} justifyContent={'center'}>
         <RowActions icon={Edit} onClick={handleEdit} tooltip={t('edit')} />
-        {/* <DeleteRowAction
+        <DeleteAction
           isOpen={isOpen}
           onOpen={onOpen}
           onClose={onClose}
           error={error}
-          isLoading={isLoading}
+          isLoading={isPending}
           onDelete={mutate}
-          confirmation={t('deleteMessage')}
-        /> */}
+          color='error'
+        />
       </Stack>
     </>
   );

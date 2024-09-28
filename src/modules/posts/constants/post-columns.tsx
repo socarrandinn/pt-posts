@@ -1,7 +1,7 @@
 import { LongText } from "../../../components/LongText";
 import { CellAlign, HeadCell } from "../../../components/Table/interfaces/table";
+import { UserCell } from "../../users/components/UserCell";
 import PostRowActions from "../components/PostRowActions/PostRowActions";
-import { UserCell } from "../components/UserCell";
 import { IPost } from "../interfaces/post.interface";
 
 export const titleColumn: HeadCell<IPost> = {
@@ -19,7 +19,7 @@ export const bodyColumn: HeadCell<IPost> = {
 export const userColumn: HeadCell<IPost> = {
   field: 'userId',
   width: 200,
-  headerName: 'posts:fields.userId',
+  headerName: 'posts:column.user',
   renderCell: (userId: number) => <UserCell userId={userId} />
 };
 
@@ -29,8 +29,8 @@ export const actionsColumn: HeadCell<IPost> = {
   width: 100,
   headerName: 'posts:fields:actions',
   disablePadding: true,
-  component: PostRowActions,
-  align: CellAlign.CENTER
+  align: CellAlign.CENTER,
+  component: PostRowActions
 };
 
 export const postColumns: Array<HeadCell<any>> = [

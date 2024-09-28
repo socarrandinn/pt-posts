@@ -1,13 +1,11 @@
-import { Theme } from '@mui/material/styles';
-
 export const MuiDialog = {
   styleOverrides: {
-    root: ({ theme }: { theme: Theme; ownerState: any }) => ({
+    root: () => ({
       '& .MuiDialog-paper': {
         position: 'relative',
         borderRadius: '10px',
         boxShadow: 0,
-        padding: '30px 20px 20px 20px',
+        padding: '24px 16px 16px 16px',
       },
       '& .MuiBackdrop-root': {
         backdropFilter: 'blur(10px)',
@@ -18,7 +16,7 @@ export const MuiDialog = {
 };
 export const MuiDialogTitle = {
   styleOverrides: {
-    root: ({ theme }: { theme: Theme; ownerState: any }) => ({
+    root: () => ({
       padding: '16px 24px',
       fontWeight: 700
     }),

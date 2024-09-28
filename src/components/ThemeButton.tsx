@@ -14,8 +14,8 @@ const ThemeButton = ({ toggle, current }: ThemeButtonProps) => {
 
   return (
     <Tooltip title='Switch between Light and Dark mode'>
-      <IconButton color='secondary' onClick={toggle}>
-        <Icon fontSize='small' />
+      <IconButton onClick={toggle}>
+        <Icon fontSize='small' sx={{ color: '#fff' }} />
       </IconButton>
     </Tooltip>
   );
