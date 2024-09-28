@@ -47,20 +47,14 @@ const Table = ({
   showHeadBorder = false,
 }: EnhancedTableProps) => {
   const { page, rowsPerPage, onRowsPerPageChange, onPageChange } = useTablePagination();
-  const ErrorResultW = ErrorResultCmp || <NotResult/>
-  const EmptyResultW = EmptyResultCmp ||  <NotResult/>
+  const ErrorResultW = ErrorResultCmp || <NotResult />
+  const EmptyResultW = EmptyResultCmp || <NotResult />
 
 
-  // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - data.length) : 0;
+    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - data?.length) : 0;
 
-  const visibleRows = useMemo(
-    () =>
-      [...data]
-        .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage),
-    [page, rowsPerPage, data],
-  );
+  const visibleRows = useMemo(() => data?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage), [page, rowsPerPage, data]);
 
 
   if (error) {
@@ -104,7 +98,7 @@ const Table = ({
                 const id = row._id || row.id;
                 return (
                   <Fragment key={id}>
-                    {!hideRowSpace && <SpaceRow rowCount={columns.length} />}
+                    {!hideRowSpace ? <SpaceRow rowCount={columns.length} /> : <></>}
                     <TableRow
                       className='row'
                       tabIndex={-1}

@@ -3,6 +3,7 @@ import { FormEventHandler, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Form } from '../../../../components/Form/Form';
 import FormTextField from '../../../../components/Form/input/text/FormTextField';
+import { SelectUsers } from '../../../users/components/SelectUsers';
 
 type PostFormProps = {
   error: any;
@@ -18,7 +19,7 @@ const PostForm = ({ control, isLoading, onSubmit }: PostFormProps) => {
 
   return (
     <Box sx={{ mt: 2 }}>
-      <Form onSubmit={onSubmit} control={control} isLoading={isLoading} id={'post-form'}>
+      <Form onSubmit={onSubmit} control={control} isLoading={isLoading} id={'post-form'} noValidate>
         <Grid2 container spacing={{ xs: 1, md: 2 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           <Grid2 size={12}>
             <FormTextField
@@ -33,12 +34,16 @@ const PostForm = ({ control, isLoading, onSubmit }: PostFormProps) => {
             <FormTextField
               autoFocus
               required
+              multiline
+              rows={4}
               name='body'
               label={t('fields.body')}
               helperText={t('helperText.body')}
             />
           </Grid2>
-
+          <Grid2 size={12}>
+            <SelectUsers name='userId' label={t('fields.userId')} />
+          </Grid2>
 
         </Grid2>
       </Form>

@@ -101,16 +101,16 @@ const LIGHT = {
   palette: {
     mode: THEMES.LIGHT,
     sidebar: {
-      background: '#081a54',
+      background: '#091A7A',
       color: 'background.paper',
       activeColor: 'primary.light',
       active: 'transparent',
     },
     spaceSelector: '#f3f4f9',
     primary: {
-      main: '#96E05C',
-      light: '#B8FF80',
-      dark: '#56C56F',
+      main: '#254EDB',
+      light: '#ADC8FF',
+      dark: '#091A7A',
     },
     opacity: {
       main: '#fdfdfd59',
@@ -134,11 +134,11 @@ const LIGHT = {
       default: '#f5f7fa',
       paper: '#FFFFFF',
     },
-    formLabel: '#11235b',
-    link: '#96E05C',
+    formLabel: '#111',
+    link: '#1939B7',
     text: {
-      primary: '#11235b',
-      secondary: '#253568',
+      primary: '#111',
+      secondary: '#222',
     },
   },
 };
@@ -154,7 +154,7 @@ const DARK = {
       paper: '#222b36',
     },
     primary: {
-      main: '#90caf9', // '#a4328a',
+      main: '#ADC8FF',
       light: '#363e48',
     },
     opacity: {
@@ -170,7 +170,7 @@ const DARK = {
       main: grey['800'],
     },
     formLabel: '#fff',
-    link: '#8ab4f8',
+    link: '#6690FF',
   },
 };
 

@@ -16,7 +16,7 @@ const PostRowActions = ({ rowId }: UserStatusProps) => {
   // const { mutate, isPending, error } = useDeletePost(rowId, onClose);
   return (
     <>
-      <Stack direction='row' spacing={1}>
+      <Stack direction='row' spacing={1} alignItems={'centre'} justifyContent={'center'}>
         <RowActions icon={Edit} onClick={handleEdit} tooltip={t('edit')} />
         {/* <DeleteRowAction
           isOpen={isOpen}

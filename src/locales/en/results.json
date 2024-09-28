@@ -1,6 +1,19 @@
 {
-  "empty": {
-    "title": "No se encontraron datos",
-    "subtitle":"Es posible que su criterio de busquedas esta mal o no hay resultados"
+  "title": "Listado de posts",
+  "create":"Crear post",
+  "edit":"Editar post",
+
+  "successUpdate":"Post actualizado satisfactoriamente",
+  "successCreated":"Post creado satisfactoriamente",
+  "successDeleted":"Post eliminado satisfactoriamente",
+  
+  "fields": {
+    "title": "Título",
+    "body": "Resumen",
+    "actions": "Acciones"
+  },
+  "helperText":{
+    "title": "Inserta el título",
+    "body": "Inserta el resumen"
   }
 }

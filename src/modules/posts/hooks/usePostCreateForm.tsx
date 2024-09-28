@@ -12,14 +12,18 @@ import { POST_LIST_KEY } from '../constants/query';
 const initValues: IPost = {
   title: '',
   body: '',
-  userId: 1
+  userId: null
 };
 
 const usePostCreateForm = (onClose: () => void, defaultValues: IPost = initValues) => {
-  const { t } = useTranslation('post');
+  const { t } = useTranslation('posts');
   const queryClient = useQueryClient();
 
-  const { control, handleSubmit, reset: resetForm, } = useForm({ resolver: yupResolver(postSchema), defaultValues, });
+  const { control, handleSubmit, reset: resetForm, } = useForm({
+    //@ts-ignore
+    resolver: yupResolver(postSchema),
+    defaultValues
+  });
 
   useEffect(() => {
     if (defaultValues) resetForm(defaultValues);

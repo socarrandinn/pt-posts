@@ -1,12 +1,21 @@
 {
-  "title": "Listado de posts",
+  "list": "Listado de posts",
+  "create":"Crear post",
+  "edit":"Editar post",
+
+  "successUpdate":"Post actualizado satisfactoriamente",
+  "successCreated":"Post creado satisfactoriamente",
+  "successDeleted":"Post eliminado satisfactoriamente",
+  
   "fields": {
     "title": "Título",
     "body": "Resumen",
+    "userId":"Usuario",
     "actions": "Acciones"
   },
-  "helperText": {
+  "helperText":{
     "title": "Inserta el título",
-    "body": "Inserta el resumen"
+    "body": "Inserta el resumen",
+    "userId":"Selecione un usuario"
   }
 }

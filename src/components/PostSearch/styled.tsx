@@ -63,7 +63,7 @@ export const SmallIconButton = styled(IconButton)(() => ({
 }));
 
 export const SearchButton = styled(Button)(() => ({
-  minHeight: 40,
+  minHeight: 35,
   borderTopLeftRadius: 0,
   borderBottomLeftRadius: 0,
   minWidth: 50,
