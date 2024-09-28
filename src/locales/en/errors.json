@@ -1,0 +1,6 @@
+{
+  "required":"Este campo es requerido",
+  "positive":"Este campo debe ser positivo",
+  "min-4": "Este campo debe tener al menos 4 caracteres",
+  "max-255":"Este campo debe tener como máximo 255 caracteres"
+}

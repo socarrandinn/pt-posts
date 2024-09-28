@@ -56,11 +56,11 @@ export const MuiTable = styled(Table)<MuiTableProps>(({ theme, showHeadBorder, h
         padding: 8,
       },
     },
-    /* ':hover': {
+    ':hover': {
       boxShadow: 0,
-      backgroundColor: theme.palette.grey[100],
-      cursor: 'pointer',
-    }, */
+      backgroundColor: theme.palette.mode === 'dark' ? theme.palette.grey[800]+ 60:  theme.palette.grey[100],
+    
+    },
   },
   '.spacing:last-child': {
     display: 'none',

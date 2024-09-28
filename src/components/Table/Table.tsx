@@ -14,6 +14,7 @@ import { TableResultProps } from '../../types';
 import { useTablePagination } from './hooks';
 import { HeadCell } from './interfaces/table';
 import SpaceRow from './Rows/SpaceRow';
+import { NotResult } from '../NoResult';
 
 export type EnhancedTableProps = TableResultProps & {
   data: any[];
@@ -46,8 +47,8 @@ const Table = ({
   showHeadBorder = false,
 }: EnhancedTableProps) => {
   const { page, rowsPerPage, onRowsPerPageChange, onPageChange } = useTablePagination();
-  const ErrorResultW = ErrorResultCmp
-  const EmptyResultW = EmptyResultCmp
+  const ErrorResultW = ErrorResultCmp || <NotResult/>
+  const EmptyResultW = EmptyResultCmp ||  <NotResult/>
 
 
   // Avoid a layout jump when reaching the last page with empty rows.

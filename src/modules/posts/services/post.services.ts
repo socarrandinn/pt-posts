@@ -1,4 +1,5 @@
-import axios, { AxiosInstance, AxiosResponse } from 'axios';
+import axios, { AxiosInstance } from 'axios';
+import { IPost } from '../interfaces/post.interface';
 
 class PostService {
   private api: AxiosInstance;
@@ -13,19 +14,19 @@ class PostService {
   }
 
   // Obtener un post por ID
-  async getPost(id: number): Promise<AxiosResponse> {
+  async getPost(id: number): Promise<IPost> {
     try {
-      const response = await this.api.get(`/posts/${id}`);
-      return response.data;
+      const response = await this.api.get<IPost>(`/posts/${id}`);
+      return response.data; // Devolvemos solo los datos, que coinciden con IPost
     } catch (error) {
       throw new Error(`Error fetching post with ID ${id}: ${error}`);
     }
   }
 
   // Listar todos los posts
-  async getAllPosts(): Promise<AxiosResponse> {
+  async getAllPosts(): Promise<IPost[]> {
     try {
-      const response = await this.api.get('/posts');      
+      const response = await this.api.get<IPost[]>('/posts');
       return response.data;
     } catch (error) {
       throw new Error(`Error fetching posts: ${error}`);
@@ -33,13 +34,9 @@ class PostService {
   }
 
   // Crear un nuevo post
-  async createPost(title: string, body: string, userId: number): Promise<AxiosResponse> {
+  async createPost(post: IPost): Promise<IPost> {
     try {
-      const response = await this.api.post('/posts', {
-        title,
-        body,
-        userId,
-      });
+      const response = await this.api.post<IPost>('/posts', post);
       return response.data;
     } catch (error) {
       throw new Error(`Error creating post: ${error}`);
@@ -47,28 +44,23 @@ class PostService {
   }
 
   // Actualizar un post existente (PUT)
-  async updatePost(id: number, title: string, body: string, userId: number): Promise<AxiosResponse> {
+  async updatePost(post: IPost): Promise<IPost> {
     try {
-      const response = await this.api.put(`/posts/${id}`, {
-        id,
-        title,
-        body,
-        userId,
-      });
+      const response = await this.api.put<IPost>(`/posts/${post.id}`, post);
       return response.data;
     } catch (error) {
-      throw new Error(`Error updating post with ID ${id}: ${error}`);
+      throw new Error(`Error updating post with ID ${post.id}: ${error}`);
     }
   }
 
   // Actualizar parcialmente un post (PATCH)
-  async patchPost(id: number, title?: string, body?: string): Promise<AxiosResponse> {
+  async patchPost(id: number, title?: string, body?: string): Promise<IPost> {
     try {
       const data: { [key: string]: string | number | undefined } = {};
       if (title) data.title = title;
       if (body) data.body = body;
-      
-      const response = await this.api.patch(`/posts/${id}`, data);
+
+      const response = await this.api.patch<IPost>(`/posts/${id}`, data);
       return response.data;
     } catch (error) {
       throw new Error(`Error patching post with ID ${id}: ${error}`);
@@ -85,9 +77,9 @@ class PostService {
   }
 
   // Filtrar posts por userId
-  async filterPostsByUserId(userId: number): Promise<AxiosResponse> {
+  async filterPostsByUserId(userId: number): Promise<IPost[]> {
     try {
-      const response = await this.api.get(`/posts`, {
+      const response = await this.api.get<IPost[]>(`/posts`, {
         params: { userId },
       });
       return response.data;
@@ -97,15 +89,14 @@ class PostService {
   }
 
   // Obtener los comentarios de un post por ID
-  async getPostComments(postId: number): Promise<AxiosResponse> {
+  async getPostComments(postId: number): Promise<any[]> {
     try {
-      const response = await this.api.get(`/posts/${postId}/comments`);
+      const response = await this.api.get<any[]>(`/posts/${postId}/comments`);
       return response.data;
     } catch (error) {
       throw new Error(`Error fetching comments for post ID ${postId}: ${error}`);
     }
   }
 }
-
 
 export default new PostService();

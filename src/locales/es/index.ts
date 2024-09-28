@@ -1,3 +1,5 @@
 export { default as locales } from './locales.json'
 export { default as posts } from './posts.json'
 export { default as results } from './results.json'
+export { default as errors } from './errors.json'
+export { default as common } from './errors.json'

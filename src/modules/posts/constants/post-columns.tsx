@@ -1,6 +1,6 @@
 import { LongText } from "../../../components/LongText";
 import { HeadCell } from "../../../components/Table/interfaces/table";
-import PostActions from "../components/PostActions/PostActions";
+import PostRowActions from "../components/PostRowActions/PostRowActions";
 import { IPost } from "../interfaces/post.interface";
 
 export const titleColumn: HeadCell<IPost> = {
@@ -19,7 +19,7 @@ export const actionsColumn: HeadCell<IPost> = {
   width: 120,
   headerName: 'posts:fields:actions',
   disablePadding: true,
-  component: PostActions,
+  component: PostRowActions,
 };
 
 export const postColumns: Array<HeadCell<any>> = [

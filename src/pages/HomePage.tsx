@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import PageCenterLayout from './PageCenterLayout';
-import PostContainer from '../modules/posts/components/PostContainer';
+import PostContainer from '../modules/posts/containers/PostContainer';
 import { PostProvider } from '../modules/posts/contexts/PostContext';
 
 const HomePage = () => {

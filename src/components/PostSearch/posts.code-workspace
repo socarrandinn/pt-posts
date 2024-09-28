@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../../DOFLEINI/tools/react-ecosystem"
+		},
+		{
+			"path": "../../../../../DOFLEINI/Fraud/admin-application"
+		}
+	],
+	"settings": {}
+}

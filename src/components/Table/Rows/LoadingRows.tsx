@@ -30,7 +30,7 @@ const LoadingRows = ({ headCellsSize = 5, hideRowSpace }: LoadingRowsProps) => {
       {loadingData.map((v, index) => (
         <Fragment key={v}>
           {!hideRowSpace && <SpaceRow rowCount={headCellsSize} />}
-          <TableRow key={index} sx={{ backgroundColor: '#fff', mt: 1 }}>
+          <TableRow key={index} sx={{ backgroundColor: (theme) => theme.palette.background.paper, mt: 1 }}>
             {heads}
           </TableRow>
         </Fragment>

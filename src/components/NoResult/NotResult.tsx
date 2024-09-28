@@ -1,15 +1,18 @@
-import { memo } from 'react';
+import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import notResult from '../../assets/empty.svg';
 import { EmptyResult } from '../EmptyResult';
-
+import { useTheme } from '@mui/material';
+import empty from '../../assets/empty.svg'
+import darkEmpty from '../../assets/dark-empty.svg'
 
 
 const NotResult = () => {
   const { t } = useTranslation('results');
+  const theme = useTheme()
+  const image = useMemo(() => theme.palette.mode == 'dark' ? darkEmpty:empty , [theme])
   return (
     <EmptyResult
-      image={notResult}
+      image={image}
       p={'0 8px'}
       title={t('empty.subtitle')}
       subtitle={t('empty.subtitle')}

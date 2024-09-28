@@ -4,5 +4,9 @@
     "title": "Título",
     "body": "Resumen",
     "actions": "Acciones"
+  },
+  "helperText": {
+    "title": "Inserta el título",
+    "body": "Inserta el resumen"
   }
 }
