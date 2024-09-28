@@ -4,6 +4,7 @@ import { Home } from '@mui/icons-material'
 import ThemeButton from '../components/ThemeButton';
 import { useSettings } from '../contexts/SettingsProvider';
 import LanguageButton from '../components/LenguageSelector/LanguageButton';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const { toggleTheme, settings } = useSettings();
@@ -18,9 +19,11 @@ const Navbar = () => {
       }}>
       <Toolbar>
         <Box sx={{ flex: 1 }} >
-          <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-            <Home />
-          </IconButton>
+          <Link to={'/'} style={{ color: '#fff', alignItems: 'center' }} >
+            <IconButton edge="start" color="inherit" aria-label="menu">
+              <Home />
+            </IconButton>
+          </Link>
         </Box>
         <LanguageButton />
         <ThemeButton toggle={toggleTheme} current={settings.theme} />

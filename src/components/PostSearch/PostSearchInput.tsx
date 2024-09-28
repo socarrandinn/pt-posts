@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { usePostContext } from '../../modules/posts/contexts/PostContext';
 
 const PostSearchInput = () => {
-  const { t } = useTranslation('posts');
+  const { t } = useTranslation('common');
   const { onFilter } = usePostContext()
   const [searchTerm, setSearchTerm] = useState('');
 

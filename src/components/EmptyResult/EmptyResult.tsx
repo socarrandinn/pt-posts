@@ -22,7 +22,7 @@ const EmptyResult = ({ image, subtitle, title, Actions, p, imageProps }: EmptyRe
       }}
     >
       <Image {...imageProps} src={image} />
-      {title && <Typography variant='mediumTitle'>{title}</Typography>}
+      {title && <Typography variant='h1' fontWeight={800}>{title}</Typography>}
       {subtitle && (
         <Typography textAlign={'center'} mb={2}>
           {subtitle}

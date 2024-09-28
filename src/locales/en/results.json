@@ -1,19 +1,6 @@
 {
-  "title": "Listado de posts",
-  "create":"Crear post",
-  "edit":"Editar post",
-
-  "successUpdate":"Post actualizado satisfactoriamente",
-  "successCreated":"Post creado satisfactoriamente",
-  "successDeleted":"Post eliminado satisfactoriamente",
-  
-  "fields": {
-    "title": "Título",
-    "body": "Resumen",
-    "actions": "Acciones"
-  },
-  "helperText":{
-    "title": "Inserta el título",
-    "body": "Inserta el resumen"
+  "empty": {
+    "title": "No data found",
+    "subtitle": "Your search criteria might be incorrect, or there are no results"
   }
 }

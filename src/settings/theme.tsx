@@ -8,7 +8,6 @@ export enum THEMES {
   DARK = 'dark'
 }
 
-
 declare module '@mui/material/styles' {
   interface Palette {
     neutral: Palette['primary'];
@@ -20,16 +19,7 @@ declare module '@mui/material/styles' {
     neutral?: PaletteOptions['primary'];
   }
 
-  interface TypographyVariants {
-    dashboardTitle: React.CSSProperties;
-  }
 
-  interface TypographyVariantsOptions {
-    dashboardTitle?: React.CSSProperties;
-    smallTitle?: React.CSSProperties;
-    mediumTitle?: React.CSSProperties;
-    largeTitle?: React.CSSProperties;
-  }
 }
 
 declare module '@mui/material/Typography' {

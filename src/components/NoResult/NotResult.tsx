@@ -14,7 +14,7 @@ const NotResult = () => {
     <EmptyResult
       image={image}
       p={'0 8px'}
-      title={t('empty.subtitle')}
+      title={t('empty.title')}
       subtitle={t('empty.subtitle')}
       imageProps={{
         sx: {

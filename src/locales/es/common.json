@@ -2,6 +2,7 @@
   "save": "Guardar",
   "cancel": "Cancelar",
   "delete": "Eliminar",
+  "search": "Buscar",
   "edit":"Editar",
   "deleteConfirmation": {
     "title": "Confirmar eliminación",
