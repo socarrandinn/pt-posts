@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import { IPost } from '../interfaces/post.interface';
+import { IUser } from '../interfaces/IUsers';
 
 class UserService {
   private api: AxiosInstance;
@@ -14,9 +14,9 @@ class UserService {
   }
 
   
-  async getUser(id: number): Promise<IPost> {
+  async getUser(id: number): Promise<IUser> {
     try {
-      const response = await this.api.get<IPost>(`/users/${id}`);
+      const response = await this.api.get<IUser>(`/users/${id}`);
       return response.data; 
     } catch (error) {
       throw new Error(`Error fetching user with ID ${id}: ${error}`);
@@ -24,9 +24,9 @@ class UserService {
   }
 
  
-  async getAllUsers(): Promise<IPost[]> {
+  async getAllUsers(): Promise<IUser[]> {
     try {
-      const response = await this.api.get<IPost[]>('/users');
+      const response = await this.api.get<IUser[]>('/users');
       return response.data;
     } catch (error) {
       throw new Error(`Error fetching users: ${error}`);

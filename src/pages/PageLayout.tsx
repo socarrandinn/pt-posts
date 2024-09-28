@@ -1,6 +1,6 @@
 import { styled, PaperProps, Box } from '@mui/material';
 import { FC, memo } from 'react'
-import { ChildrenProps } from '../common/types';
+import { ChildrenProps } from '../types';
 
 const Container = styled(Box)(({ theme }) => ({
   padding: '24px 16px',

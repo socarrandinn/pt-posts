@@ -8,13 +8,12 @@ import TableRow from '@mui/material/TableRow';
 import EnhancedTableHead from './TableHeader/EnhancedTableHead';
 import { EnhancedTableRows, LoadingRows } from './Rows';
 import { MuiTable } from './styled';
-import { CardForm } from '../PaperSection';
-import { CardFormPaperProps } from '../PaperSection/CardForm';
 import { TableResultProps } from '../../types';
 import { useTablePagination } from './hooks';
 import { HeadCell } from './interfaces/table';
 import SpaceRow from './Rows/SpaceRow';
 import { NotResult } from '../NoResult';
+import { Paper } from '@mui/material';
 
 export type EnhancedTableProps = TableResultProps & {
   data: any[];
@@ -59,16 +58,16 @@ const Table = ({
 
   if (error) {
     return (
-      <CardForm sx={{ display: 'flex', justifyItems: 'center', width: '100%', ...CardFormPaperProps.sx }}>
+      <Paper sx={{ display: 'flex', justifyItems: 'center', width: '100%', padding: { xs: 2, md: 4 } }}>
         <ErrorResultW error={error} />
-      </CardForm>
+      </Paper>
     );
   }
   if (!isLoading && !data?.length) {
     return (
-      <CardForm sx={{ display: 'flex', justifyContent: 'center', width: '100%', ...CardFormPaperProps.sx }}>
+      <Paper sx={{ display: 'flex', justifyContent: 'center', width: '100%', padding: { xs: 2, md: 4 } }}>
         {EmptyResultW}
-      </CardForm>
+      </Paper>
     );
   }
 

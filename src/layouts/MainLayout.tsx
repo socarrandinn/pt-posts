@@ -1,7 +1,7 @@
 import { memo } from 'react';
-import { ChildrenProps } from '../common/types';
 import { Container } from '@mui/material';
 import Navbar from './Navbar';
+import { ChildrenProps } from '../types';
 
 
 const MainLayout = ({ children }: ChildrenProps) => {

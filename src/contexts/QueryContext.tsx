@@ -1,6 +1,6 @@
 import { MutationCache, QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { ChildrenProps } from '../common/types/common';
+import { ChildrenProps } from '../types';
 
 
 const queryCache = new QueryCache();

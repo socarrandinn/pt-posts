@@ -1,6 +1,6 @@
 import { I18nextProvider } from 'react-i18next';
-import { ChildrenProps } from '../common/types/common';
 import i18n from '../settings/i18n';
+import { ChildrenProps } from '../types';
 
 function I18Provider({ children }: ChildrenProps) {
   return (
